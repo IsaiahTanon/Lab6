@@ -9,6 +9,9 @@ def encode(password):
     encoded_password = ''.join(final_list)
     return 'Your password has been encoded and stored!'
 
+# Stephany Jimenez
+def decode(password):
+    return ''.join([str((int(num) - 3) ) for num in password])
 
 def main():
     while True:
