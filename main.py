@@ -5,6 +5,7 @@ def encode(password):
     for i in range(len(x)):
         y = int(x[i])
         final_list += [str(y + 3)]
+    global encoded_password
     encoded_password = ''.join(final_list)
     return 'Your password has been encoded and stored!'
 
@@ -21,6 +22,8 @@ def main():
         if choice == '1':
             print(encode(input('Please enter your password to encode:')))
             continue
+        if choice == '2':
+            print('The encoded password is' + encoded_password + ', and the original password is' + decode(encoded_password) + '.')
 
 
 main()
