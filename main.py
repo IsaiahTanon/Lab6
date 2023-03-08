@@ -1,3 +1,4 @@
+# Isaiah Tanon
 def encode(password):
     x = str(password)
     final_list = []
@@ -7,15 +8,20 @@ def encode(password):
     encoded_password = ''.join(final_list)
     return 'Your password has been encoded and stored!'
 
+
 def main():
-    print('Menu\n'
-          '-------------\n'
-          '1. Encode\n'
-          '2. Decode\n'
-          '3. Quit')
-    choice = input('Please enter an option:')
-    if choice == '1':
-        print(encode(input('Please enter your password to encode:')))
+    loop = True
+    while loop:
+        print('Menu\n'
+              '-------------\n'
+              '1. Encode\n'
+              '2. Decode\n'
+              '3. Quit')
+        choice = input('Please enter an option:')
+        if choice == '1':
+            print(encode(input('Please enter your password to encode:')))
+            continue
+
 
 main()
 
