@@ -11,8 +11,7 @@ def encode(password):
 
 
 def main():
-    loop = True
-    while loop:
+    while True:
         print('Menu\n'
               '-------------\n'
               '1. Encode\n'
@@ -23,7 +22,10 @@ def main():
             print(encode(input('Please enter your password to encode:')))
             continue
         if choice == '2':
-            print('The encoded password is' + encoded_password + ', and the original password is' + decode(encoded_password) + '.')
+            print('The encoded password is' + encoded_password +
+                  ', and the original password is' + decode(encoded_password) + '.')
+        else:
+            break
 
 
 main()
